@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfricaBusiness Digital - Warros ASSANI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/all.min.css">
+    <style>
+        /* ============================================
+           VARIABLES & RESET
+        ============================================ */
+        :root {
+            --primary: #F5A623;
+            --primary-dark: #E8940F;
+            --secondary: #1A1A2E;
+            --accent: #16213E;
+            --text-light: #FFFFFF;
+            --text-dark: #1A1A2E;
+            --text-gray: #6B7280;
+            --success: #10B981;
+            --card-bg: #FFFFFF;
+            --bg-light: #F9FAFB;
+            --border: #E5E7EB;
+            --shadow: 0 10px 40px rgba(0,0,0,0.1);
+            --shadow-hover: 0 20px 60px rgba(245,166,35,0.3);
+            --radius: 16px;
+            --radius-sm: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* ============================================
+           NAVBAR
+        ============================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 0 5%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(245,166,35,0.2);
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .navbar-logo {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .navbar-name {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .navbar-name span {
+            color: var(--primary);
+        }
+
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .navbar-nav a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav a:hover {
+            color: var(--primary);
+        }
+
+        .btn-nav {
+            background: var(--primary);
+            color: var(--text-dark) !important;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600 !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: white;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* ============================================
+           HERO SECTION
+        ============================================ */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+            display: flex;
+            align-items: center;
+            padding: 70px 5% 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(245,166,35,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(245,166,35,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245,166,35,0.15);
+            border: 1px solid rgba(245,166,35,0.3);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: var(--text-light);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-title span {
+            color: var(--primary);
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--text-dark);
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-light);
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Hero Visual */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-card-main {
+            background: white;
+            border-radius: 24px;
+            padding: 30px;
+            width: 320px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .hero-card-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .hero-card-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .hero-card-sub {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+        }
+
+        .hero-product-list {
+            list-style: none;
+        }
+
+        .hero-product-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.85rem;
+        }
+
+        .hero-product-list li:last-child {
+            border-bottom: none;
+        }
+
+        .product-name-mini {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-dark);
+        }
+
+        .product-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .product-price-mini {
+            font-weight: 700;
+            color: var(--success);
+        }
+
+        .hero-floating-badge {
+            position: absolute;
+            background: white;
+            border-radius: 12px;
+            padding: 12px 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .badge-top-right {
+            top: -20px;
+            right: -30px;
+        }
+
+        .badge-bottom-left {
+            bottom: -20px;
+            left: -30px;
+        }
+
+        .badge-icon {
+            font-size: 24px;
+        }
+
+        .badge-text strong {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .badge-text span {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+        }
+
+        /* ============================================
+           TRUST BAR
+        ============================================ */
+        .trust-bar {
+            background: var(--secondary);
+            padding: 20px 5%;
+            overflow: hidden;
+        }
+
+        .trust-bar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .trust-item i {
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        /* ============================================
+           SECTION STYLES
+        ============================================ */
+        .section {
+            padding: 80px 5%;
+        }
+
+        .section-center {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: rgba(245,166,35,0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            border: 1px solid rgba(245,166,35,0.2);
+        }
+
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+
+        .section-title span {
+            color: var(--primary);
+        }
+
+        .section-desc {
+            font-size: 1rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        /* ============================================
+           PRODUCTS SECTION
+        ============================================ */
+        #produits {
+            background: var(--bg-light);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary);
+        }
+
+        .product-badge-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--primary);
+            color: var(--text-dark);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            z-index: 1;
+        }
+
+        .product-badge-tag.bestseller {
+            background: #EF4444;
+            color: white;
+        }
+
+        .product-badge-tag.new {
+            background: var(--success);
+            color: white;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            position: relative;
+        }
+
+        .product-image-1 {
+            background: linear-gradient(135deg, #1A1A2E, #0F3460);
+        }
+
+        .product-image-2 {
+            background: linear-gradient(135deg, #0F3460, #533483);
+        }
+
+        .product-image-3 {
+            background: linear-gradient(135deg, #533483, #E94560);
+        }
+
+        .product-image-4 {
+            background: linear-gradient(135deg, #E94560, #F5A623);
+        }
+
+        .product-image-5 {
+            background: linear-gradient(135deg, #10B981, #059669);
+        }
+
+        .product-body {
+            padding: 24px;
+        }
+
+        .product-category {
+            font-size: 0.75rem;
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .product-desc {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .product-features li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            color: var(--text-gray);
+            margin-bottom: 6px;
+        }
+
+        .product-features li i {
+            color: var(--success);
+            font-size: 0.75rem;
+        }
+
+        .product-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .product-price {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-dark);
+        }
+
+        .product-price-old {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            text-decoration: line-through;
+            font-weight: 400;
+        }
+
+        .btn-buy {
+            background: var(--primary);
+            color: var(--text-dark);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-buy:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        /* ============================================
+           FEATURED PRODUCT (Ebook)
+        ============================================ */
+        .featured-section {
+            background: linear-gradient(135deg, #1A1A2E, #16213E);
+            padding: 80px 5%;
+        }
+
+        .featured-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .featured-book {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .book-mockup {
+            width: 280px;
+            height: 380px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 8px 24px 24px 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 
+                -8px 0 0 #c8831a,
+                -16px 4px 20px rgba(0,0,0,0.4),
+                20px 20px 60px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .book-mockup::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 30px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px 0 0 8px;
+        }
+
+        .book-emoji {
+            font-size: 4rem;
+            margin-bottom: 16px;
+        }
+
+        .book-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+
+        .book-subtitle {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .book-price-tag {
+            position: absolute;
+            bottom: -15px;
+            right: -15px;
+            background: white;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .book-price-tag .price {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1;
+        }
+
+        .book-price-tag .currency {
+            font-size: 0.65rem;
+            color: var(--text-gray);
+        }
+
+        .featured-text {
+            color: white;
+        }
+
+        .featured-text .section-tag {
+            background: rgba(245,166,35,0.2);
+        }
+
+        .featured-text .section-title {
+            color: white;
+        }
+
+        .featured-text .section-desc {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .featured-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .featured-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            color: rgba(255,255,255,0.85);
+            font-size: 0.95rem;
+        }
+
+        .featured-list-icon {
+            width: 28px;
+            height: 28px;
+            background: rgba(245,166,35,0.2);
+            border: 1px solid rgba(245,166,35,0.4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .featured-list-icon i {
+            color: var(--primary);
+            font-size: 0.75rem;
+        }
+
+        .featured-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* ============================================
+           HOW IT WORKS
+        ============================================ */
+        .how-section {
+            background: white;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 40px 24px;
+            border-radius: var(--radius);
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .step-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: var(--text-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 20px;
+        }
+
+        .step-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .step-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .step-desc {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           TESTIMONIALS
+        ============================================ */
+        .testimonials-section {
+            background: var(--bg-light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .testimonial-stars {
+            color: var(--primary);
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-text {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .avatar-1 { background: linear-gradient(135deg, #F5A623, #E8940F); }
+        .avatar-2 { background: linear-gradient(135deg, #10B981, #059669); }
+        .avatar-3 { background: linear-gradient(135deg, #3B82F6, #2563EB); }
+
+        .author-name {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .author-country {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+
+        /* ============================================
+           FAQ SECTION
+        ============================================ */
+        .faq-section {
+            background: white;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 24px;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-light);
+        }
+
+        .faq-question.active {
+            color: var(--primary);
+            background: rgba(245,166,35,0.05);
+        }
+
+        .faq-icon {
+            width: 28px;
+            height: 28px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s;
+            font-size: 0.8rem;
+        }
+
+        .faq-question.active .faq-icon {
+            background: var(--primary);
+            color: var(--text-dark);
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 24px;
+        }
+
+        .faq-answer.open {
+            max-height: 200px;
+            padding: 0 24px 20px;
+        }
+
+        .faq-answer p {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           CTA SECTION
+        ============================================ */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .cta-desc {
+            font-size: 1.1rem;
+            color: rgba(26,26,46,0.75);
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-dark {
+            background: var(--secondary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-dark:hover {
+            background: #0d0d1f;
+            transform: translateY(-3px);
+        }
+
+        /* ============================================
+           FOOTER
+        ============================================ */
+        .footer {
+            background: var(--secondary);
+            color: white;
+            padding: 60px 5% 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+        }
+
+        .footer-brand p {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin: 16px 0 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-btn {
+            width: 38px;
+            height: 38px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .social-btn:hover {
+            background: var(--primary);
+            color: var(--text-dark);
+        }
+
+        .footer-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-bottom p {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer-bottom span {
+            color: var(--primary);
+        }
+
+        /* ============================================
+           MOBILE MENU
+        ============================================ */
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: var(--secondary);
+            padding: 20px 5%;
+            z-index: 999;
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: all 0.3s;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .mobile-menu.open {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .mobile-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--primary);
+        }
+
+        /* ============================================
+           SCROLL TO TOP
+        ============================================ */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 5px 20px rgba(245,166,35,0.4);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+            z-index: 100;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* ============================================
+           NOTIFICATION TOAST
+        ============================================ */
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: var(--secondary);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            border-left: 4px solid var(--primary);
+            transform: translateX(120%);
+            transition: all 0.4s;
+            z-index: 200;
+            max-width: 300px;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast-title {
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--primary);
+        }
+
+        /* ============================================
+           ANIMATIONS
+        ============================================ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .animate-in {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .animated {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* ============================================
+           RESPONSIVE
+        ============================================ */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.4rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            .featured-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .featured-buttons {
+                justify-content: center;
+            }
+
+            .navbar-nav {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 580px) {
+            .hero-title {
+                font-size: 1.9rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         NAVBAR
+    ============================================ -->
+    <nav class="navbar">
+        <a href="#accueil" class="navbar-brand">
+            <div class="navbar-logo">🚀</div>
+            <span class="navbar-name">Africa<span>Business</span></span>
+        </a>
+
+        <ul class="navbar-nav">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#produits">Produits</a></li>
+            <li><a href="#a-propos">À propos</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#produits" class="btn-nav">Acheter maintenant</a></li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#accueil" onclick="toggleMenu()">🏠 Accueil</a>
+        <a href="#produits" onclick="toggleMenu()">📦 Produits</a>
+        <a href="#a-propos" onclick="toggleMenu()">👤 À propos</a>
+        <a href="#faq" onclick="toggleMenu()">❓ FAQ</a>
+        <a href="#produits" onclick="toggleMenu()" style="color: var(--primary); font-weight: 700;">🛒 Acheter maintenant</a>
+    </div>
+
+    <!-- ============================================
+         HERO
+    ============================================ -->
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <i class="fas fa-fire"></i>
+                    #1 Boutique Digitale Business Afrique
+                </div>
+                <h1 class="hero-title">
+                    Lance Ton Business en Afrique avec <span>100$ ou Moins</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Accède à des ressources digitales exclusives pour entrepreneurs africains. 
+                    Ebooks, templates, guides pratiques — tout ce dont tu as besoin pour réussir.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#produits" class="btn-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                        Voir les produits
+                    </a>
+                    <a href="#a-propos" class="btn-outline">
+                        <i class="fas fa-play-circle"></i>
+                        En savoir plus
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Clients satisfaits</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Produits digitaux</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Pays africains</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-card-main">
+                    <div class="hero-card-header">
+                        <div class="hero-card-icon">🚀</div>
+                        <div>
+                            <div class="hero-card-title">AfricaBusiness Digital</div>
+                            <div class="hero-card-sub">Produits disponibles</div>
+                        </div>
+                    </div>
+                    <ul class="hero-product-list">
+                        <li>
+                            <span class="product-name-mini">
+                                <span class="product-dot"></span>
+                                30 Idées Business 100$
+                            </span>
+                            <span class="product-price-mini">9.99$</span>
+                        </li>
+                        <li>
+                            <span class="product-name-mini">
+                                <span class="product-dot"></span>
+                                Template Site Web
+                            </span>
+                            <span class="product-price-mini">19.99$</span>
+                        </li>
+                        <li>
+                            <span class="product-name-mini">
+                                <span class="product-dot"></span>
+                                Scripts WhatsApp
+                            </span>
+                            <span class="product-price-mini">7.99$</span>
+                        </li>
+                        <li>
+                            <span class="product-name-mini">
+                                <span class="product-dot"></span>
+                                Guide Dropshipping
+                            </span>
+                            <span class="product-price-mini">14.99$</span>
+                        </li>
+                        <li>
+                            <span class="product-name-mini">
+                                <span class="product-dot"></span>
+                                Pack Templates Canva
+                            </span>
+                            <span class="product-price-mini">12.99$</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hero-floating-badge badge-top-right">
+                    <span class="badge-icon">🔥</span>
+                    <div class="badge-text">
+                        <strong>Bestseller</strong>
+                        <span>30 Idées Business</span>
+                    </div>
+                </div>
+
+                <div class="hero-floating-badge badge-bottom-left">
+                    <span class="badge-icon">✅</span>
+                    <div class="badge-text">
+                        <strong>Accès instantané</strong>
+                        <span>Livraison digitale</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TRUST BAR
+    ============================================ -->
+    <div class="trust-bar">
+        <div class="trust-bar-inner">
+            <div class="trust-item">
+                <i class="fas fa-lock"></i>
+                Paiement 100% sécurisé
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-download"></i>
+                Téléchargement instantané
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-infinity"></i>
+                Accès à vie
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-headset"></i>
+                Support 24/7
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-undo"></i>
+                Garantie 30 jours
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         FEATURED PRODUCT - EBOOK
+    ============================================ -->
+    <section class="featured-section" id="a-propos">
+        <div class="featured-content">
+            <div class="featured-book">
+                <div class="book-mockup">
+                    <div class="book-emoji">💡</div>
+                    <div class="book-title">30 Idées de Business Rentable à Lancer en Afrique</div>
+                    <div class="book-subtitle">avec seulement 100$</div>
+                    <div class="book-price-tag">
+                        <span class="price">9.99$</span>
+                        <span class="currency">USD</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-text">
+                <div class="section-tag">⭐ Produit Phare</div>
+                <h2 class="section-title">L'Ebook qui va <span>Changer Ton Avenir</span></h2>
+                <p class="section-desc">
+                    Tu veux lancer ton business mais tu penses que tu n'as pas assez d'argent ? 
+                    Cet ebook te prouve que 100$ suffisent pour démarrer une activité rentable en Afrique.
+                </p>
+                <ul class="featured-list">
+                    <li>
+                        <div class="featured-list-icon"><i class="fas fa-check"></i></div>
+                        <span><strong>30 idées concrètes</strong> classées par secteur d'activité</span>
+                    </li>
+                    <li>
+                        <div class="featured-list-icon"><i class="fas fa-check"></i></div>
+                        <span><strong>Budget détaillé</strong> pour chaque idée de business</span>
+                    </li>
+                    <li>
+                        <div class="featured-list-icon"><i class="fas fa-check"></i></div>
+                        <span><strong>Conseils pratiques</strong> adaptés au contexte africain</span>
+                    </li>
+                    <li>
+                        <div class="featured-list-icon"><i class="fas fa-check"></i></div>
+                        <span><strong>Stratégies de vente</strong> pour chaque business</span>
+                    </li>
+                    <li>
+                        <div class="featured-list-icon"><i class="fas fa-check"></i></div>
+                        <span><strong>Bonus :</strong> Comment trouver tes premiers clients</span>
+                    </li>
+                </ul>
+                <div class="featured-buttons">
+                    <!-- 🔴 REMPLACE CE LIEN PAR TON LIEN CHARIOW -->
+                    <a href="COLLE_TON_LIEN_CHARIOW_ICI" class="btn-primary" target="_blank">
+                        <i class="fas fa-book"></i>
+                        Obtenir l'Ebook — 9.99$
+                    </a>
+                    <a href="#produits" class="btn-outline" style="color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.3);">
+                        <i class="fas fa-eye"></i>
+                        Voir tous les produits
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PRODUCTS GRID
+    ============================================ -->
+    <section class="section" id="produits">
+        <div class="section-center">
+            <div class="section-tag">📦 Catalogue Complet</div>
+            <h2 class="section-title">Tous Nos <span>Produits Digitaux</span></h2>
+            <p class="section-desc">
+                Des ressources pensées pour les entrepreneurs africains. 
+                Téléchargement instantané après paiement.
+            </p>
+        </div>
+
+        <div class="products-grid">
+
+            <!-- PRODUIT 1 - Ebook -->
+            <div class="product-card animate-in">
+                <div class="product-badge-tag bestseller">🔥 Bestseller</div>
+                <div class="product-image product-image-1">📚</div>
+                <div class="product-body">
+                    <div class="product-category">📖 Ebook</div>
+                    <h3 class="product-title">30 Idées Business Rentable en Afrique avec 100$</h3>
+                    <p class="product-desc">Guide complet avec 30 idées de business validées, budgets détaillés et conseils pratiques pour l'Afrique.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i> 30 idées avec budgets</li>
+                        <li><i class="fas fa-check-circle"></i> Stratégies de démarrage</li>
+                        <li><i class="fas fa-check-circle"></i> Format PDF - 50+ pages</li>
+                        <li><i class="fas fa-check-circle"></i> Accès à vie</li>
+                    </ul>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price-old">19.99$</div>
+                            <div class="product-price">9.99$</div>
+                        </div>
+                        <!-- 🔴 REMPLACE PAR TON LIEN CHARIOW -->
+                        <a href="COLLE_TON_LIEN_CHARIOW_ICI" class="btn-buy" target="_blank">
+                            <i class="fas fa-shopping-cart"></i>
+                            Acheter
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUIT 2 - Template Site Web -->
+            <div class="product-card animate-in">
+                <div class="product-badge-tag new">✨ Nouveau</div>
+                <div class="product-image product-image-2">💻</div>
+                <div class="product-body">
+                    <div class="product-category">🌐 Template Web</div>
+                    <h3 class="product-title">Template Site Web Business Professionnel</h3>
+                    <p class="product-desc">Site web HTML/CSS/JS complet et personnalisable, compatible avec tous les hébergeurs web.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i> Design moderne responsive</li>
+                        <li><i class="fas fa-check-circle"></i> Compatible tous hébergeurs</li>
+                        <li><i class="fas fa-check-circle"></i> Code source inclus</li>
+                        <li><i class="fas fa-check-circle"></i> Guide d'installation</li>
+                    </ul>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price-old">39.99$</div>
+                            <div class="product-price">19.99$</div>
+                        </div>
+                        <!-- 🔴 REMPLACE PAR TON LIEN CHARIOW -->
+                        <a href="COLLE_TON_LIEN_CHARIOW_ICI" class="btn-buy" target="_blank">
+                            <i class="fas fa-shopping-cart"></i>
+                            Acheter
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUIT 3 - Scripts WhatsApp -->
+            <div class="product-card animate-in">
+                <div class="product-badge-tag">💬 Populaire</div>
+                <div class="product-image product-image-3">📱</div>
+                <div class="product-body">
+                    <div class="product-category">📝 Scripts de Vente</div>
+                    <h3 class="product-title">Pack 50 Scripts de Vente WhatsApp qui Convertissent</h3>
+                    <p class="product-desc">50 messages prêts à l'emploi pour vendre sur WhatsApp, convaincre des clients et relancer des prospects.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i> 50 scripts prêts à copier</li>
+                        <li><i class="fas fa-check-circle"></i> Tous secteurs d'activité</li>
+                        <li><i class="fas fa-check-circle"></i> Format PDF & Word</li>
+                        <li><i class="fas fa-check-circle"></i> 100% personnalisables</li>
+                    </ul>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price-old">14.99$</div>
+                            <div class="product-price">7.99$</div>
+                        </div>
+                        <!-- 🔴 REMPLACE PAR TON LIEN CHARIOW -->
+                        <a href="COLLE_TON_LIEN_CHARIOW_ICI" class="btn-buy" target="_blank">
+                            <i class="fas fa-shopping-cart"></i>
+                            Acheter
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUIT 4 - Guide Dropshipping -->
+            <div class="product-card animate-in">
+                <div class="product-image product-image-4">📦</div>
+                <div class="product-body">
+                    <div class="product-category">🛍️ Guide Complet</div>
+                    <h3 class="product-title">Guide Dropshipping Afrique 2024 — De Zéro à 1000$/mois</h3>
+                    <p class="product-desc">Tout ce qu'il faut savoir pour lancer un business de dropshipping en Afrique, étape par étape.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i> Trouver des fournisseurs locaux</li>
+                        <li><i class="fas fa-check-circle"></i> Créer sa boutique en ligne</li>
+                        <li><i class="fas fa-check-circle"></i> Stratégies marketing digital</li>
+                        <li><i class="fas fa-check-circle"></i> Gérer les livraisons</li>
+                    </ul>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price-old">24.99$</div>
+                            <div class="product-price">14.99$</div>
+                        </div>
+                        <!-- 🔴 REMPLACE PAR TON LIEN CHARIOW -->
+                        <a href="COLLE_TON_LIEN_CHARIOW_ICI" class="btn-buy" target="_blank">
+                            <i class="fas fa-shopping-cart"></i>
+                            Acheter
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUIT 5 - Templates Canva -->
+            <div class="product-card animate-in">
+                <div class="product-badge-tag new">🎨 Design</div>
+                <div class="product-image product-image-5">🎨</div>
+                <div class="product-body">
+                    <div class="product-category">📐 Templates</div>
+                    <h3 class="product-title">Pack 100 Templates Réseaux Sociaux (Canva) pour Business</h3>
+                    <p class="product-desc">100 templates Canva professionnels pour Instagram, Facebook et WhatsApp. Personnalisables en 5 minutes.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i> 100 templates Canva</li>
+                        <li><i class="fas fa-check-circle"></i> Posts, Stories, Flyers</li>
+                        <li><i class="fas fa-check-circle"></i> Accès Canva gratuit</li>
+                        <li><i class="fas fa-check-circle"></i> Personnalisation facile</li>
+                    </ul>
+                    <div class="product-footer">
+                        <div>
+                            <div class="product-price-old">24.99$</div>
+                            <div class="product-price">12.99$</div>
+                        </div>
+                        <!-- 🔴 REMPLACE PAR TON LIEN CHARIOW -->
+                        <a href="COLLE_TON_LIEN_CHARIOW_ICI" class="btn-buy" target="_blank">
+                            <i class="fas fa-shopping-cart"></i>
+                            Acheter
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================
+         HOW IT WORKS
+    ============================================ -->
+    <section class="section how-section">
+        <div class="section-center">
+            <div class="section-tag">⚡ Simple & Rapide</div>
+            <h2 class="section-title">Comment <span>Ça Marche ?</span></h2>
+            <p class="section-desc">Obtiens tes produits digitaux en moins de 5 minutes, de n'importe où en Afrique.</p>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card animate-in">
+                <div class="step-number">1</div>
+                <div class="step-icon">🛒</div>
+                <h3 class="step-title">Choisis ton produit</h3>
+                <p class="step-desc">Parcours notre catalogue et sélectionne le produit qui correspond à tes besoins.</p>
+            </div>
+
+            <div class="step-card animate-in">
+                <div class="step-number">2</div>
+                <div class="step-icon">💳</div>
+                <h3 class="step-title">Paye en toute sécurité</h3>
+                <p class="step-desc">Paiement sécurisé via Mobile Money, carte bancaire ou autres méthodes acceptées.</p>
+            </div>
+
+            <div class="step-card animate-in">
+                <div class="step-number">3</div>
+                <div class="step-icon">📥</div>
+                <h3 class="step-title">Télécharge instantanément</h3>
+                <p class="step-desc">Reçois ton produit par email immédiatement après le paiement. Accès à vie garanti.</p>
+            </div>
+
+            <div class="step-card animate-in">
+                <div class="step-number">4</div>
+                <div class="step-icon">🚀</div>
+                <h3 class="step-title">Lance ton business</h3>
+                <p class="step-desc">Applique les conseils et commence à générer des revenus rapidement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TESTIMONIALS
+    ============================================ -->
+    <section class="section testimonials-section">
+        <div class="section-center">
+            <div class="section-tag">💬 Témoignages</div>
+            <h2 class="section-title">Ce que Disent nos <span>Clients</span></h2>
+            <p class="section-desc">Ils ont fait confiance à AfricaBusiness Digital et ont transformé leur vie.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card animate-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"J'ai acheté l'ebook et j'ai lancé mon business de restauration rapide en 2 semaines. Aujourd'hui je gagne 400$ par mois. Merci Warros !"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar avatar-1">K</div>
+                    <div>
+                        <div class="author-name">Kofi Mensah</div>
+                        <div class="author-country">🇬🇭 Ghana</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card animate-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Les scripts WhatsApp ont révolutionné mes ventes. Je convertis maintenant 3 fois plus de prospects en clients. Produit excellent !"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar avatar-2">A</div>
+                    <div>
+                        <div class="author-name">Amina Touré</div>
+                        <div class="author-country">🇨🇮 Côte d'Ivoire</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card animate-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Le guide dropshipping est une mine d'or. J'ai tout compris en une journée et j'ai lancé ma boutique la semaine suivante. Résultat : 650$ le premier mois !"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar avatar-3">M</div>
+                    <div>
+                        <div class="author-name">Mohamed Diallo</div>
+                        <div class="author-country">🇸🇳 Sénégal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FAQ
+    ============================================ -->
+    <section class="section faq-section" id="faq">
+        <div class="section-center">
+            <div class="section-tag">❓ Questions fréquentes</div>
+            <h2 class="section-title">Tout ce que tu <span>veux savoir</span></h2>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    Comment vais-je recevoir mon produit après l'achat ?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Immédiatement après le paiement, tu recevras un email avec le lien de téléchargement. Le processus est entièrement automatisé via Chariow.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    Quelles sont les méthodes de paiement acceptées ?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>On accepte Wave, Orange Money, MTN Money, carte Visa/Mastercard, et PayPal selon ton pays. Toutes les transactions sont 100% sécurisées.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    Puis-je utiliser les produits commercialement ?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Les ebooks et guides sont pour usage personnel. Les templates (web et Canva) sont livrés avec une licence d'utilisation commerciale pour tes propres projets.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    Y a-t-il une garantie de remboursement ?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Oui ! Si le produit ne correspond pas à la description, nous proposons un remboursement dans les 30 jours. Contacte-nous par email ou WhatsApp.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    Les produits sont-ils adaptés à mon pays ?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Tous nos produits sont créés spécifiquement pour le contexte africain. Ils couvrent des pays comme la Côte d'Ivoire, le Sénégal, le Cameroun, la RDC, le Mali, le Ghana et bien d'autres.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CTA SECTION
+    ============================================ -->
+    <section class="cta-section">
+        <div class="section-tag" style="background: rgba(26,26,46,0.15); color: var(--text-dark);">
+            🎯 Prêt à réussir ?
+        </div>
+        <h2 class="cta-title">Lance Ton Business Aujourd'hui !</h2>
+        <p class="cta-desc">
+            Ne tarde plus. Chaque jour sans action est un jour de retard sur tes objectifs.
+        </p>
+        <div class="cta-buttons">
+            <a href="#produits" class="btn-dark">
+                <i class="fas fa-rocket"></i>
+                Voir tous les produits
+            </a>
+            <!-- 🔴 REMPLACE PAR TON LIEN CHARIOW -->
+            <a href="COLLE_TON_LIEN_CHARIOW_ICI" class="btn-primary" target="_blank" style="background: white; color: var(--text-dark);">
+                <i class="fas fa-book"></i>
+                Commencer avec l'Ebook — 9.99$
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="navbar-brand" style="margin-bottom: 0;">
+                    <div class="navbar-logo">🚀</div>
+                    <span class="navbar-name">Africa<span>Business</span> Digital</span>
+                </div>
+                <p>
+                    La référence des ressources digitales pour entrepreneurs africains. 
+                    Des produits créés par Warros ASSANI pour t'aider à réussir en Afrique.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Produits</h4>
+                <ul class="footer-links">
+                    <li><a href="#produits">📚 Ebook Business 100$</a></li>
+                    <li><a href="#produits">💻 Template Site Web</a></li>
+                    <li><a href="#produits">📱 Scripts WhatsApp</a></li>
+                    <li><a href="#produits">📦 Guide Dropshipping</a></li>
+                    <li><a href="#produits">🎨 Pack Templates Canva</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#a-propos">À propos</a></li>
+                    <li><a href="#produits">Boutique</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">📧 Contact Email</a></li>
+                    <li><a href="#">💬 WhatsApp Support</a></li>
+                    <li><a href="#">📋 CGV</a></li>
+                    <li><a href="#">🔒 Politique de confidentialité</a></li>
+                    <li><a href="#">↩️ Remboursement</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 AfricaBusiness Digital — Créé par <span>Warros ASSANI</span> | Tous droits réservés | Powered by <span>Chariow</span></p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-title">🔥 Offre limitée !</div>
+        <div>L'ebook "30 Idées Business" est à -50% aujourd'hui seulement !</div>
+    </div>
+
+    <!-- ============================================
+         JAVASCRIPT
+    ============================================ -->
+    <script>
+        // =====================
+        // MOBILE MENU
+        // =====================
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('open');
+        }
+
+        // Close menu on outside click
+        document.addEventListener('click', function(e) {
+            const menu = document.getElementById('mobileMenu');
+            if (!e.target.closest('.navbar') && !e.target.closest('.mobile-menu')) {
+                menu.classList.remove('open');
+            }
+        });
+
+        // =====================
+        // FAQ ACCORDION
+        // =====================
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            const allButtons = document.querySelectorAll('.faq-question');
+
+            allAnswers.forEach((a, i) => {
+                if (a !== answer) {
+                    a.classList.remove('open');
+                    allButtons[i].classList.remove('active');
+                }
+            });
+
+            answer.classList.toggle('open');
+            button.classList.toggle('active');
+        }
+
+        // =====================
+        // SCROLL TO TOP
+        // =====================
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.getElementById('scrollTop');
+            if (window.scrollY > 400) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+
+        // =====================
+        // ANIMATIONS ON SCROLL
+        // =====================
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('animated');
+                    }, index * 100);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+
+        // =====================
+        // TOAST NOTIFICATION
+        // =====================
+        setTimeout(function() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(function() {
+                toast.classList.remove('show');
+            }, 5000);
+        }, 3000);
+
+        // =====================
+        // SMOOTH NAVBAR
+        // =====================
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(26, 26, 46, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(26, 26, 46, 0.95)';
+            }
+        });
+    </script>
+
+</body>
+</html>
