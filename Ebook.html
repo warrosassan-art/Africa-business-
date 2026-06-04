@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Idées Business Afrique - Warros ASSANI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0a0a0a;
+            color: #333;
+        }
+
+        /* ═══════════════════════════════
+           PAGE DE GARDE
+        ═══════════════════════════════ */
+        .cover-page {
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 40%, #16213e 70%, #0f3460 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 40px 20px;
+        }
+
+        /* Cercles animés background */
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .bg-circle-1 {
+            width: 400px;
+            height: 400px;
+            background: #F5A623;
+            top: -100px;
+            right: -100px;
+            animation-delay: 0s;
+        }
+
+        .bg-circle-2 {
+            width: 300px;
+            height: 300px;
+            background: #F5A623;
+            bottom: -50px;
+            left: -80px;
+            animation-delay: 2s;
+        }
+
+        .bg-circle-3 {
+            width: 150px;
+            height: 150px;
+            background: white;
+            top: 50%;
+            left: 10%;
+            animation-delay: 4s;
+            opacity: 0.05;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+
+        /* Étoiles scintillantes */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+
+        /* Badge top */
+        .cover-badge {
+            background: rgba(245,166,35,0.15);
+            border: 1px solid rgba(245,166,35,0.4);
+            color: #F5A623;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            animation: fadeInDown 1s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Emoji continent animé */
+        .cover-continent {
+            font-size: 5rem;
+            animation: pulse 2s ease-in-out infinite;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 0 20px rgba(245,166,35,0.5));
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Titre principal */
+        .cover-title {
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 900;
+            color: white;
+            text-align: center;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .cover-title .number {
+            font-size: clamp(4rem, 12vw, 8rem);
+            color: #F5A623;
+            display: block;
+            line-height: 1;
+            text-shadow: 0 0 40px rgba(245,166,35,0.5);
+        }
+
+        .cover-title .highlight {
+            color: #F5A623;
+        }
+
+        /* Sous-titre */
+        .cover-subtitle {
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        /* Ligne décorative */
+        .cover-line {
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #F5A623, transparent);
+            margin: 20px auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Prix tag */
+        .cover-price {
+            background: #F5A623;
+            color: #1a1a2e;
+            padding: 12px 40px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease 0.7s both;
+            box-shadow: 0 10px 40px rgba(245,166,35,0.4);
+        }
+
+        /* Stats row */
+        .cover-stats {
+            display: flex;
+            gap: 30px;
+            margin: 30px 0;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease 0.6s both;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cover-stat {
+            text-align: center;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(245,166,35,0.2);
+            border-radius: 16px;
+            padding: 16px 24px;
+        }
+
+        .cover-stat-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #F5A623;
+            display: block;
+        }
+
+        .cover-stat-label {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Auteur */
+        .cover-author {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin-top: 40px;
+            animation: fadeInUp 1s ease 0.9s both;
+        }
+
+        .cover-author-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #F5A623, #e8940f);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 12px;
+            border: 3px solid rgba(245,166,35,0.3);
+        }
+
+        .cover-author-name {
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .cover-author-title {
+            color: #F5A623;
+            font-size: 0.8rem;
+        }
+
+        /* Décorations coins */
+        .corner-deco {
+            position: absolute;
+            z-index: 2;
+        }
+
+        .corner-tl {
+            top: 20px;
+            left: 20px;
+            font-size: 2rem;
+            animation: spin 10s linear infinite;
+        }
+
+        .corner-tr {
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            animation: spin 8s linear infinite reverse;
+        }
+
+        .corner-bl {
+            bottom: 20px;
+            left: 20px;
+            font-size: 1.5rem;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .corner-br {
+            bottom: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            animation: float 5s ease-in-out infinite reverse;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Floating emojis */
+        .floating-emoji {
+            position: absolute;
+            font-size: 1.5rem;
+            animation: floatAround 8s ease-in-out infinite;
+            z-index: 1;
+            opacity: 0.4;
+        }
+
+        @keyframes floatAround {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-15px) rotate(5deg); }
+            75% { transform: translateY(10px) rotate(-5deg); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ═══════════════════════════════
+           PAGES INTÉRIEURES
+        ═══════════════════════════════ */
+        .page {
+            background: white;
+            padding: 40px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-dark {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+        }
+
+        /* Header de section */
+        .section-header {
+            text-align: center;
+            padding: 60px 24px 40px;
+            background: linear-gradient(135deg, #1a1a2e, #0f3460);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(245,166,35,0.1);
+            border-radius: 50%;
+        }
+
+        .section-emoji {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 16px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .section-title-page {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .section-title-page span {
+            color: #F5A623;
+        }
+
+        .section-subtitle {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Carte produit */
+        .idea-card {
+            background: white;
+            border-radius: 20px;
+            margin: 20px 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border: 1px solid #f0f0f0;
+            position: relative;
+        }
+
+        .idea-card-header {
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .idea-card-header-1 { background: linear-gradient(135deg, #1a1a2e, #0f3460); }
+        .idea-card-header-2 { background: linear-gradient(135deg, #134e4a, #0f766e); }
+        .idea-card-header-3 { background: linear-gradient(135deg, #7c2d12, #c2410c); }
+        .idea-card-header-4 { background: linear-gradient(135deg, #4c1d95, #7c3aed); }
+        .idea-card-header-5 { background: linear-gradient(135deg, #1e3a5f, #2563eb); }
+        .idea-card-header-6 { background: linear-gradient(135deg, #3d1a00, #92400e); }
+
+        .idea-number-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(245,166,35,0.2);
+            border: 2px solid #F5A623;
+            color: #F5A623;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 800;
+        }
+
+        .idea-emoji-big {
+            font-size: 3.5rem;
+            margin-bottom: 12px;
+            display: block;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+
+        .idea-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .idea-category-tag {
+            background: rgba(245,166,35,0.2);
+            border: 1px solid rgba(245,166,35,0.4);
+            color: #F5A623;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .idea-card-body {
+            padding: 24px;
+        }
+
+        /* Budget box */
+        .budget-box {
+            background: linear-gradient(135deg, #F5A623, #e8940f);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .budget-icon {
+            font-size: 2rem;
+        }
+
+        .budget-amount {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: white;
+        }
+
+        .budget-label {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* Revenu estimé */
+        .revenue-box {
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .revenue-amount {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: white;
+        }
+
+        .revenue-label {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* Liste avec icônes */
+        .icon-list {
+            list-style: none;
+            margin-bottom: 16px;
+        }
+
+        .icon-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 0.875rem;
+            color: #444;
+        }
+
+        .icon-list li:last-child {
+            border-bottom: none;
+        }
+
+        .list-icon {
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* Steps animés */
+        .steps-list {
+            list-style: none;
+            margin-bottom: 16px;
+        }
+
+        .steps-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            font-size: 0.875rem;
+            color: #444;
+        }
+
+        .step-num {
+            width: 28px;
+            height: 28px;
+            background: #F5A623;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        /* Conseil pro */
+        .pro-tip {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-left: 4px solid #F5A623;
+            border-radius: 0 12px 12px 0;
+            padding: 16px;
+            margin-top: 16px;
+        }
+
+        .pro-tip-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 6px;
+            font-size: 0.875rem;
+        }
+
+        .pro-tip p {
+            font-size: 0.825rem;
+            color: #78350f;
+            line-height: 1.6;
+        }
+
+        /* Séparateur section */
+        .section-divider {
+            background: linear-gradient(135deg, #F5A623, #e8940f);
+            padding: 30px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-divider::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+
+        .divider-text {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #1a1a2e;
+            position: relative;
+            z-index: 1;
+        }
+
+        .divider-emoji {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* Page intro */
+        .intro-page {
+            background: #fff;
+            padding: 40px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-page::before {
+            content: '💡';
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.05;
+            top: -20px;
+            right: -20px;
+        }
+
+        .intro-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1a1a2e;
+            margin-bottom: 16px;
+        }
+
+        .intro-title span {
+            color: #F5A623;
+        }
+
+        .intro-text {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Quote box */
+        .quote-box {
+            background: linear-gradient(135deg, #1a1a2e, #0f3460);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .quote-mark {
+            font-size: 4rem;
+            color: #F5A623;
+            line-height: 1;
+            margin-bottom: -10px;
+            display: block;
+        }
+
+        .quote-text {
+            font-size: 1rem;
+            color: white;
+            font-style: italic;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+
+        .quote-author {
+            color: #F5A623;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+
+        /* Promesse */
+        .promise-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .promise-item {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 16px 12px;
+            text-align: center;
+            border: 2px solid #f0f0f0;
+        }
+
+        .promise-emoji {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .promise-text {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Page bonus */
+        .bonus-page {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 40px 24px;
+        }
+
+        .bonus-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .bonus-title span {
+            color: #F5A623;
+        }
+
+        .bonus-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(245,166,35,0.2);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .bonus-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .bonus-icon {
+            font-size: 2rem;
+        }
+
+        .bonus-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .bonus-desc {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.6;
+        }
+
+        /* Page conclusion */
+        .conclusion-page {
+            background: linear-gradient(135deg, #F5A623, #e8940f);
+            padding: 60px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .conclusion-page::before {
+            content: '🚀';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .conclusion-emoji {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .conclusion-title {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #1a1a2e;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .conclusion-text {
+            font-size: 1rem;
+            color: rgba(26,26,46,0.8);
+            line-height: 1.8;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .conclusion-cta {
+            background: #1a1a2e;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
+        }
+
+        /* Navigation entre pages */
+        .page-nav {
+            background: #1a1a2e;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .page-nav-brand {
+            color: #F5A623;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .page-num {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.8rem;
+        }
+
+        /* Barre de progression */
+        .progress-bar {
+            height: 3px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #F5A623;
+            transition: width 0.3s;
+        }
+
+        /* Print styles */
+        @media print {
+            body { background: white; }
+            .cover-page { break-after: page; }
+            .idea-card { break-inside: avoid; }
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .cover-title .number { font-size: 5rem; }
+            .promise-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     PAGE DE GARDE ULTRA STYLÉE
+═══════════════════════════════════════ -->
+<div class="cover-page">
+
+    <!-- Étoiles -->
+    <div class="stars">
+        <div class="star" style="top:10%; left:20%; animation-delay:0s;"></div>
+        <div class="star" style="top:20%; left:80%; animation-delay:0.5s;"></div>
+        <div class="star" style="top:40%; left:10%; animation-delay:1s;"></div>
+        <div class="star" style="top:60%; left:90%; animation-delay:1.5s;"></div>
+        <div class="star" style="top:80%; left:30%; animation-delay:2s;"></div>
+        <div class="star" style="top:15%; left:50%; animation-delay:2.5s;"></div>
+        <div class="star" style="top:70%; left:60%; animation-delay:3s;"></div>
+        <div class="star" style="top:35%; left:40%; animation-delay:0.8s;"></div>
+        <div class="star" style="top:55%; left:75%; animation-delay:1.3s;"></div>
+        <div class="star" style="top:85%; left:85%; animation-delay:1.8s;"></div>
+        <div class="star" style="top:5%; left:65%; animation-delay:2.3s;"></div>
+        <div class="star" style="top:90%; left:15%; animation-delay:2.8s;"></div>
+    </div>
+
+    <!-- Cercles background -->
+    <div class="bg-circle bg-circle-1"></div>
+    <div class="bg-circle bg-circle-2"></div>
+    <div class="bg-circle bg-circle-3"></div>
+
+    <!-- Emojis flottants -->
+    <span class="floating-emoji" style="top:15%; left:5%; animation-delay:0s;">💰</span>
+    <span class="floating-emoji" style="top:25%; right:8%; animation-delay:1s;">📈</span>
+    <span class="floating-emoji" style="top:65%; left:8%; animation-delay:2s;">🏆</span>
+    <span class="floating-emoji" style="top:75%; right:5%; animation-delay:0.5s;">💡</span>
+    <span class="floating-emoji" style="top:45%; left:3%; animation-delay:1.5s;">🌍</span>
+    <span class="floating-emoji" style="top:50%; right:3%; animation-delay:2.5s;">🚀</span>
+
+    <!-- Coins décoratifs -->
+    <span class="corner-deco corner-tl">⭐</span>
+    <span class="corner-deco corner-tr">💫</span>
+    <span class="corner-deco corner-bl">🌟</span>
+    <span class="corner-deco corner-br">✨</span>
+
+    <!-- Badge -->
+    <div class="cover-badge">
+        🌍 &nbsp; Édition Afrique 2024 &nbsp; 🌍
+    </div>
+
+    <!-- Emoji continent -->
+    <div class="cover-continent">🌍</div>
+
+    <!-- Titre -->
+    <h1 class="cover-title">
+        <span class="number">30</span>
+        IDÉES DE BUSINESS<br>
+        <span class="highlight">RENTABLE</span> EN AFRIQUE
+    </h1>
+
+    <div class="cover-line"></div>
+
+    <p class="cover-subtitle">
+        à lancer avec seulement
+        <strong style="color: #F5A623; font-size: 1.3em;">100$</strong>
+        ou moins
+    </p>
+
+    <!-- Stats -->
+    <div class="cover-stats">
+        <div class="cover-stat">
+            <span class="cover-stat-number">30</span>
+            <span class="cover-stat-label">Idées business</span>
+        </div>
+        <div class="cover-stat">
+            <span class="cover-stat-number">100$</span>
+            <span class="cover-stat-label">Budget max</span>
+        </div>
+        <div class="cover-stat">
+            <span class="cover-stat-number">5</span>
+            <span class="cover-stat-label">Catégories</span>
+        </div>
+    </div>
+
+    <!-- Prix -->
+    <div class="cover-price">
+        💎 &nbsp; Guide Premium &nbsp; 💎
+    </div>
+
+    <!-- Auteur -->
+    <div class="cover-author">
+        <div class="cover-author-avatar">👨‍💼</div>
+        <div class="cover-author-name">Warros ASSANI</div>
+        <div class="cover-author-title">🚀 AfricaBusiness Digital</div>
+    </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE INTRODUCTION
+═══════════════════════════════════════ -->
+<div class="page-nav">
+    <span class="page-nav-brand">🚀 AfricaBusiness Digital</span>
+    <span class="page-num">Introduction</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" style="width: 5%"></div></div>
+
+<div class="intro-page">
+    <h2 class="intro-title">
+        Pourquoi ce guide va <span>changer ta vie</span> ?
+    </h2>
+
+    <div class="quote-box">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">
+            Tu n'as pas besoin d'attendre d'avoir beaucoup d'argent pour commencer. 
+            Tu as besoin d'une idée, d'un plan, et du courage de passer à l'action. 
+            Ce guide te donne tout ça.
+        </p>
+        <div class="quote-author">— Warros ASSANI, AfricaBusiness Digital</div>
+    </div>
+
+    <p class="intro-text">
+        Cher(e) entrepreneur(e) africain(e),<br><br>
+        Si tu lis ce guide, c'est que tu veux <strong>changer ta situation financière</strong>. 
+        Tu veux créer quelque chose à toi. Tu veux être libre.<br><br>
+        J'ai sélectionné pour toi <strong>30 idées de business concrètes</strong>, 
+        toutes adaptées au contexte africain, toutes réalisables avec <strong>100$ ou moins</strong>.
+    </p>
+
+    <div class="promise-grid">
+        <div class="promise-item">
+            <span class="promise-emoji">✅</span>
+            <div class="promise-text">Idées testées et validées</div>
+        </div>
+        <div class="promise-item">
+            <span class="promise-emoji">💰</span>
+            <div class="promise-text">Budgets détaillés</div>
+        </div>
+        <div class="promise-item">
+            <span class="promise-emoji">🎯</span>
+            <div class="promise-text">Stratégies concrètes</div>
+        </div>
+        <div class="promise-item">
+            <span class="promise-emoji">🌍</span>
+            <div class="promise-text">100% contexte africain</div>
+        </div>
+        <div class="promise-item">
+            <span class="promise-emoji">📈</span>
+            <div class="promise-text">Revenus estimés</div>
+        </div>
+        <div class="promise-item">
+            <span class="promise-emoji">🚀</span>
+            <div class="promise-text">Démarrage rapide</div>
+        </div>
+    </div>
+
+    <p class="intro-text">
+        <strong>Comment utiliser ce guide ?</strong><br>
+        Lis toutes les idées. Puis choisis <strong>UNE seule</strong> qui correspond 
+        à tes compétences et ton budget. Lance-la cette semaine. Pas la semaine prochaine. 
+        <strong>Cette semaine !</strong>
+    </p>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SECTION 1 — ALIMENTATION
+═══════════════════════════════════════ -->
+<div class="section-header">
+    <span class="section-emoji">🍽️</span>
+    <h2 class="section-title-page">
+        Catégorie <span>01</span>
+    </h2>
+    <div class="section-title-page" style="font-size: 1.5rem;">
+        Alimentation & Restauration
+    </div>
+    <p class="section-subtitle">6 idées — Budget : 50$ à 100$</p>
+</div>
+
+<div class="page-nav">
+    <span class="page-nav-brand">🚀 AfricaBusiness Digital</span>
+    <span class="page-num">Section 1 / 5</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" style="width: 15%"></div></div>
+
+<!-- IDÉE 1 -->
+<div class="idea-card">
+    <div class="idea-card-header idea-card-header-1">
+        <div class="idea-number-badge">#01</div>
+        <span class="idea-emoji-big">🥤</span>
+        <h3 class="idea-title">Vente de Jus Naturels</h3>
+        <span class="idea-category-tag">🍽️ Alimentation</span>
+    </div>
+    <div class="idea-card-body">
+
+        <div class="budget-box">
+            <span class="budget-icon">💰</span>
+            <div>
+                <div class="budget-amount">50$</div>
+                <div class="budget-label">Budget de démarrage</div>
+            </div>
+        </div>
+
+        <div class="revenue-box">
+            <span class="budget-icon">📈</span>
+            <div>
+                <div class="revenue-amount">300$ — 500$ / mois</div>
+                <div class="revenue-label">Revenu estimé</div>
+            </div>
+        </div>
+
+        <p style="font-size: 0.875rem; color: #555; margin-bottom: 16px; font-weight: 600;">
+            📦 Ce qu'il faut acheter :
+        </p>
+        <ul class="icon-list">
+            <li><span class="list-icon">🔧</span> Extracteur de jus manuel — 15$</li>
+            <li><span class="list-icon">🍊</span> Fruits de saison (stock) — 20$</li>
+            <li><span class="list-icon">🍶</span> Bouteilles plastiques — 8$</li>
+            <li><span class="list-icon">🏷️</span> Étiquettes + marqueur — 3$</li>
+            <li><span class="list-icon">❄️</span> Glacière portable — 4$</li>
+        </ul>
+
+        <p style="font-size: 0.875rem; color: #555; margin-bottom: 12px; font-weight: 600;">
+            🎯 Où vendre :
+        </p>
+        <ul class="icon-list">
+            <li><span class="list-icon">🏫</span> Devant les écoles et universités</li>
+            <li><span class="list-icon">🏪</span> Marchés et rues passantes</li>
+            <li><span class="list-icon">💼</span> Bureaux et entreprises</li>
+            <li><span class="list-icon">📱</span> Via WhatsApp (livraison à domicile)</li>
+        </ul>
+
+        <p style="font-size: 0.875rem; color: #555; margin-bottom: 12px; font-weight: 600;">
+            ⚡ Comment démarrer :
+        </p>
+        <ul class="steps-list">
+            <li><div class="step-num">1</div> Achète ton matériel de base</li>
+            <li><div class="step-num">2</div> Fais des jus test pour la famille</li>
+            <li><div class="step-num">3</div> Prends de belles photos avec ton téléphone</li>
+            <li><div class="step-num">4</div> Crée un groupe WhatsApp "Mes clients"</li>
+            <li><div class="step-num">5</div> Offre des échantillons gratuits le 1er jour</li>
+        </ul>
+
+        <div class="pro-tip">
+            <div class="pro-tip-header">
+                <span>💡</span> Conseil Pro de Warros
+            </div>
+            <p>
+                Spécialise-toi dans 3-4 jus maximum. Propose des abonnements hebdomadaires 
+                à tes clients réguliers : "5 bouteilles par semaine livrées chez toi". 
+                C'est un revenu garanti chaque semaine !
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- IDÉE 2 -->
+<div class="idea-card">
+    <div class="idea-card-header idea-card-header-2">
+        <div class="idea-number-badge">#02</div>
+        <span class="idea-emoji-big">🥪</span>
+        <h3 class="idea-title">Sandwichs & Repas Rapides</h3>
+        <span class="idea-category-tag">🍽️ Alimentation</span>
+    </div>
+    <div class="idea-card-body">
+
+        <div class="budget-box">
+            <span class="budget-icon">💰</span>
+            <div>
+                <div class="budget-amount">60$</div>
+                <div class="budget-label">Budget de démarrage</div>
+            </div>
+        </div>
+
+        <div class="revenue-box">
+            <span class="budget-icon">📈</span>
+            <div>
+                <div class="revenue-amount">250$ — 600$ / mois</div>
+                <div class="revenue-label">Revenu estimé</div>
+            </div>
+        </div>
+
+        <ul class="icon-list">
+            <li><span class="list-icon">🛒</span> Ingrédients de base — 30$</li>
+            <li><span class="list-icon">📦</span> Emballages / sachets — 10$</li>
+            <li><span class="list-icon">🔥</span> Réchaud à gaz portable — 15$</li>
+            <li><span class="list-icon">🍳</span> Ustensiles de cuisine — 5$</li>
+        </ul>
+
+        <ul class="steps-list">
+            <li><div class="step-num">1</div> Choisis 2-3 recettes populaires locales</li>
+            <li><div class="step-num">2</div> Teste avec ton entourage</li>
+            <li><div class="step-num">3</div> Fixe tes horaires de vente</li>
+            <li><div class="step-num">4</div> Crée ta page WhatsApp Business</li>
+        </ul>
+
+        <div class="pro-tip">
+            <div class="pro-tip-header">
+                <span>💡</span> Conseil Pro de Warros
+            </div>
+            <p>
+                Propose la livraison dans un rayon de 1-2 km. 
+                C'est ton avantage concurrentiel. Charge 20% de plus pour ce service.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- IDÉE 3 -->
+<div class="idea-card">
+    <div class="idea-card-header idea-card-header-3">
+        <div class="idea-number-badge">#03</div>
+        <span class="idea-emoji-big">🍦</span>
+        <h3 class="idea-title">Glaces Artisanales</h3>
+        <span class="idea-category-tag">🍽️ Alimentation</span>
+    </div>
+    <div class="idea-card-body">
+        <div class="budget-box">
+            <span class="budget-icon">💰</span>
+            <div>
+                <div class="budget-amount">70$</div>
+                <div class="budget-label">Budget de démarrage</div>
+            </div>
+        </div>
+        <div class="revenue-box">
+            <span class="budget-icon">📈</span>
+            <div>
+                <div class="revenue-amount">200$ — 400$ / mois</div>
+                <div class="revenue-label">Revenu estimé</div>
+            </div>
+        </div>
+        <ul class="icon-list">
+            <li><span class="list-icon">🧊</span> Moules à glace — 10$</li>
+            <li><span class="list-icon">🥛</span> Lait, sucre, fruits — 25$</li>
+            <li><span class="list-icon">❄️</span> Glacière + glace — 20$</li>
+            <li><span class="list-icon">📦</span> Emballages + bâtonnets — 15$</li>
+        </ul>
+        <div class="pro-tip">
+            <div class="pro-tip-header"><span>💡</span> Conseil Pro de Warros</div>
+            <p>Crée des saveurs locales uniques : mangue-gingembre, bissap, tamarin. 
+            Les grandes marques ne font pas ça. C'est TON avantage !</p>
+        </div>
+    </div>
+</div>
+
+<!-- SÉPARATEUR -->
+<div class="section-divider">
+    <span class="divider-emoji">💻</span>
+    <div class="divider-text">Prêt pour les idées Tech & Digital ?</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SECTION 2 — DIGITAL & TECH
+═══════════════════════════════════════ -->
+<div class="section-header">
+    <span class="section-emoji">💻</span>
+    <h2 class="section-title-page">
+        Catégorie <span>02</span>
+    </h2>
+    <div class="section-title-page" style="font-size: 1.5rem;">
+        Digital & Technologie
+    </div>
+    <p class="section-subtitle">6 idées — Budget : 0$ à 30$</p>
+</div>
+
+<div class="page-nav">
+    <span class="page-nav-brand">🚀 AfricaBusiness Digital</span>
+    <span class="page-num">Section 2 / 5</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" style="width: 35%"></div></div>
+
+<!-- IDÉE 7 -->
+<div class="idea-card">
+    <div class="idea-card-header idea-card-header-4">
+        <div class="idea-number-badge">#07</div>
+        <span class="idea-emoji-big">🎨</span>
+        <h3 class="idea-title">Création de Contenu Réseaux Sociaux</h3>
+        <span class="idea-category-tag">💻 Digital</span>
+    </div>
+    <div class="idea-card-body">
+        <div class="budget-box">
+            <span class="budget-icon">💰</span>
+            <div>
+                <div class="budget-amount">20$</div>
+                <div class="budget-label">Budget de démarrage</div>
+            </div>
+        </div>
+        <div class="revenue-box">
+            <span class="budget-icon">📈</span>
+            <div>
+                <div class="revenue-amount">150$ — 1000$ / mois</div>
+                <div class="revenue-label">Revenu estimé (3 à 5 clients)</div>
+            </div>
+        </div>
+        <ul class="icon-list">
+            <li><span class="list-icon">📱</span> Smartphone — 0$ (tu l'as déjà)</li>
+            <li><span class="list-icon">🎨</span> Canva Pro — 13$/mois</li>
+            <li><span class="list-icon">📶</span> Data internet — 7$/mois</li>
+        </ul>
+        <ul class="steps-list">
+            <li><div class="step-num">1</div> Apprends Canva gratuitement sur YouTube</li>
+            <li><div class="step-num">2</div> Crée 10 posts de démonstration</li>
+            <li><div class="step-num">3</div> Contacte 20 commerces locaux</li>
+            <li><div class="step-num">4</div> Offre 1 semaine gratuite</li>
+            <li><div class="step-num">5</div> Convertis en clients payants</li>
+        </ul>
+        <div class="pro-tip">
+            <div class="pro-tip-header"><span>💡</span> Conseil Pro de Warros</div>
+            <p>Spécialise-toi dans UN secteur (ex: restaurants uniquement). 
+            Tu deviendras l'expert référence de ce secteur et tu peux charger plus cher !</p>
+        </div>
+    </div>
+</div>
+
+<!-- IDÉE 8 -->
+<div class="idea-card">
+    <div class="idea-card-header idea-card-header-5">
+        <div class="idea-number-badge">#08</div>
+        <span class="idea-emoji-big">📚</span>
+        <h3 class="idea-title">Vente de Produits Digitaux</h3>
+        <span class="idea-category-tag">💻 Digital</span>
+    </div>
+    <div class="idea-card-body">
+        <div class="budget-box">
+            <span class="budget-icon">💰</span>
+            <div>
+                <div class="budget-amount">0$ — 30$</div>
+                <div class="budget-label">Budget de démarrage</div>
+            </div>
+        </div>
+        <div class="revenue-box">
+            <span class="budget-icon">📈</span>
+            <div>
+                <div class="revenue-amount">500$ — 2000$ / mois</div>
+                <div class="revenue-label">Revenu estimé</div>
+            </div>
+        </div>
+        <ul class="icon-list">
+            <li><span class="list-icon">🏪</span> Compte Chariow — GRATUIT</li>
+            <li><span class="list-icon">📶</span> Data internet — 10$/mois</li>
+            <li><span class="list-icon">🎨</span> Canva (gratuit) — 0$</li>
+        </ul>
+        <ul class="icon-list">
+            <li><span class="list-icon">📖</span> Ebooks et guides pratiques</li>
+            <li><span class="list-icon">🎨</span> Templates Canva personnalisables</li>
+            <li><span class="list-icon">💬</span> Scripts WhatsApp de vente</li>
+            <li><span class="list-icon">🎓</span> Formations vidéo en ligne</li>
+        </ul>
+        <div class="pro-tip">
+            <div class="pro-tip-header"><span>💡</span> Conseil Pro de Warros</div>
+            <p>C'est le business le plus rentable de ce guide ! Tu crées ton produit UNE SEULE FOIS 
+            et tu le vends à l'infini. Pas de stock. Livraison automatique. Revenus passifs 24h/24 !</p>
+        </div>
+    </div>
+</div>
+
+<!-- IDÉE 9 -->
+<div class="idea-card">
+    <div class="idea-card-header idea-card-header-6">
+        <div class="idea-number-badge">#09</div>
+        <span class="idea-emoji-big">🎬</span>
+        <h3 class="idea-title">Montage Vidéo (CapCut)</h3>
+        <span class="idea-category-tag">💻 Digital</span>
+    </div>
+    <div class="idea-card-body">
+        <div class="budget-box">
+            <span class="budget-icon">💰</span>
+            <div>
+                <div class="budget-amount">0$</div>
+                <div class="budget-label">Budget de démarrage</div>
+            </div>
+        </div>
+        <div class="revenue-box">
+            <span class="budget-icon">📈</span>
+            <div>
+                <div class="revenue-amount">300$ — 1500$ / mois</div>
+                <div class="revenue-label">Revenu estimé</div>
+            </div>
+        </div>
+        <ul class="steps-list">
+            <li><div class="step-num">1</div> Télécharge CapCut gratuitement</li>
+            <li><div class="step-num">2</div> Apprends sur YouTube (1 semaine)</li>
+            <li><div class="step-num">3</div> Monte 5 vidéos de démonstration</li>
+            <li><div class="step-num">4</div> Poste sur TikTok et Instagram</li>
+            <li><div class="step-num">5</div> Les clients viennent à toi !</li>
+        </ul>
+        <div class="pro-tip">
+            <div class="pro-tip-header"><span>💡</span> Conseil Pro de Warros</div>
+            <p>Les Reels Instagram et TikTok sont extrêmement demandés. 
+            Prix premium : 15$ à 50$ par vidéo courte. Tu peux en faire 5 par jour !</p>
+        </div>
+    </div>
+</div>
+
+<!-- SÉPARATEUR -->
+<div class="section-divider">
+    <span class="divider-emoji">🛍️</span>
+    <div class="divider-text">Place au Commerce maintenant !</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SECTION 3 — COMMERCE
+═══════════════════════════════════════ -->
+<div class="section-header">
+    <span class="section-emoji">🛍️</span>
+    <h2 class="section-title-page">
+        Catégorie <span>03</span>
+    </h2>
+    <div class="section-title-page" style="font-size: 1.5rem;">
+        Commerce & Vente
+    </div>
+    <p class="section-subtitle">6 idées — Budget : 30$ à 100$</p>
+</div>
+
+<div class="page-nav">
+    <span class="page-nav-brand">🚀 AfricaBusiness Digital</span>
+    <span class="page-num">Section 3 / 5</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" style="width: 55%"></div></div>
+
+<!-- IDÉE 13 -->
+<div class="idea-card">
+    <div class="idea-card-header idea-card-header-2">
+        <div class="idea-number-badge">#13</div>
+        <span class="idea-emoji-big">📦</span>
+        <h3 class="idea-title">Dropshipping Local</h3>
+        <span class="idea-category-tag">🛍️ Commerce</span>
+    </div>
+    <div class="idea-card-body">
+        <div class="budget-box">
+            <span class="budget-icon">💰</span>
+            <div>
+                <div class="budget-amount">50$</div>
+                <div class="budget-label">Budget de démarrage</div>
+            </div>
+        </div>
+        <div class="revenue-box">
+            <span class="budget-icon">📈</span>
+            <div>
+                <div class="revenue-amount">300$ — 1000$ / mois</div>
+                <div class="revenue-label">Revenu estimé</div>
+            </div>
+        </div>
+        <ul class="steps-list">
+            <li><div class="step-num">1</div> Trouve un fournisseur local fiable</li>
+            <li><div class="step-num">2</div> Vends ses produits sur WhatsApp/Facebook</li>
+            <li><div class="step-num">3</div> Client commande et paie chez toi</li>
+            <li><div class="step-num">4</div> Tu commandes chez le fournisseur</li>
+            <li><div class="step-num">5</div> Fournisseur livre — Tu gardes la marge !</li>
+        </ul>
+        <div class="pro-tip">
+            <div class="pro-tip-header"><span>💡</span> Conseil Pro de Warros</div>
+            <p>Commence avec les produits de beauté et les vêtements. 
+            Très demandés, marges élevées (30% à 80%) et faciles à vendre sur Instagram.</p>
+        </div>
+    </div>
+</div>
+
+<!-- IDÉE 15 -->
+<div class="idea-card">
+    <div class="idea-card-header idea-card-header-3">
+        <div class="idea-number-badge">#15</div>
+        <span class="idea-emoji-big">👗</span>
+        <h3 class="idea-title">Boutique Vêtements en Ligne</h3>
+        <span class="idea-category-tag">🛍️ Commerce</span>
+    </div>
+    <div class="idea-card-body">
+        <div class="budget-box">
+            <span class="budget-icon">💰</span>
+            <div>
+                <div class="budget-amount">100$</div>
+                <div class="budget-label">Budget de démarrage</div>
+            </div>
+        </div>
+        <div class="revenue-box">
+            <span class="budget-icon">📈</span>
+            <div>
+                <div class="revenue-amount">400$ — 1200$ / mois</div>
+                <div class="revenue-label">Revenu estimé</div>
+            </div>
+        </div>
+        <ul class="icon-list">
+            <li><span class="list-icon">👚</span> Stock vêtements sélectionnés — 80$</li>
+            <li><span class="list-icon">📸</span> Photos pro (ton smartphone) — 0$</li>
+            <li><span class="list-icon">📢</span> Publicité Facebook/Instagram — 20$</li>
+        </ul>
+        <div class="pro-tip">
+            <div class="pro-tip-header"><span>💡</span> Conseil Pro de Warros</div>
+            <p>Mise sur l'authenticité africaine : wax, boubou moderne, tenues traditionnelles revisitées. 
+            C'est un marché mondial et les clients paient bien pour ça !</p>
+        </div>
+    </div>
+</div>
+
+<!-- SÉPARATEUR -->
+<div class="section-divider">
+    <span class="divider-emoji">💅</span>
+    <div class="divider-text">Beauté & Bien-être — Très rentable !</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SECTION 4 — BEAUTÉ
+═══════════════════════════════════════ -->
+<div class="section-header">
+    <span class="section-emoji">💅</span>
+    <h2 class="section-title-page">
+        Catégorie <span>04</span>
+    </h2>
+    <div class="section-title-page" style="font-size: 1.5rem;">
+        Beauté & Bien-être
+    </div>
+    <p class="section-subtitle">4 idées — Budget : 10$ à 80$</p>
+</div>
+
+<div class="page-nav">
+    <span class="page-nav-brand">🚀 AfricaBusiness Digital</span>
+    <span class="page-num">Section 4 / 5</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" style="width: 70%"></div></div>
+
+<!-- IDÉE 19 -->
+<div class="idea-card">
+    <div class="idea-card-header idea-card-header-4">
+        <div class="idea-number-badge">#19</div>
+        <span class="idea-emoji-big">💇‍♀️</span>
+        <h3 class="idea-title">Coiffure à Domicile</h3>
+        <span class="idea-category-tag">💅 Beauté</span>
+    </div>
+    <div class="idea-card-body">
+        <div class="budget-box">
+            <span class="budget-icon">💰</span>
+            <div>
+                <div class="budget-amount">80$</div>
+                <div class="budget-label">Budget de démarrage</div>
+            </div>
+        </div>
+        <div class="revenue-box">
+            <span class="budget-icon">📈</span>
+            <div>
+                <div class="revenue-amount">400$ — 1500$ / mois</div>
+                <div class="revenue-label">Revenu estimé</div>
+            </div>
+        </div>
+        <ul class="icon-list">
+            <li><span class="list-icon">✂️</span> Kit coiffure de base — 50$</li>
+            <li><span class="list-icon">💆</span> Extensions et produits — 30$</li>
+        </ul>
+        <div class="pro-tip">
+            <div class="pro-tip-header"><span>💡</span> Conseil Pro de Warros</div>
+            <p>La coiffure à domicile est très appréciée car pratique pour les femmes qui travaillent. 
+            Tu peux charger 20% à 30% de plus qu'un salon classique. C'est entièrement justifié !</p>
+        </div>
+    </div>
+</div>
+
+<!-- IDÉE 20 -->
+<div class="idea-card">
+    <div class="idea-card-header idea-card-header-5">
+        <div class="idea-number-badge">#20</div>
+        <span class="idea-emoji-big">💄</span>
+        <h3 class="idea-title">Maquillage & Beauté Événementiel</h3>
+        <span class="idea-category-tag">💅 Beauté</span>
+    </div>
+    <div class="idea-card-body">
+        <div class="budget-box">
+            <span class="budget-icon">💰</span>
+            <div>
+                <div class="budget-amount">70$</div>
+                <div class="budget-label">Budget de démarrage</div>
+            </div>
+        </div>
+        <div class="revenue-box">
+            <span class="budget-icon">📈</span>
+            <div>
+                <div class="revenue-amount">500$ — 2000$ / mois</div>
+                <div class="revenue-label">Revenu estimé</div>
+            </div>
+        </div>
+        <ul class="icon-list">
+            <li><span class="list-icon">💄</span> Kit maquillage de base — 50$</li>
+            <li><span class="list-icon">🖌️</span> Pinceaux et accessoires — 20$</li>
+        </ul>
+        <div class="pro-tip">
+            <div class="pro-tip-header"><span>💡</span> Conseil Pro de Warros</div>
+            <p>Spécialise-toi dans le maquillage de mariée. C'est le plus rentable : 
+            50$ à 200$ par prestation, et le bouche à oreille fonctionne 
+            incroyablement bien dans ce secteur !</p>
+        </div>
+    </div>
+</div>
+
+<!-- SÉPARATEUR -->
+<div class="section-divider">
+    <span class="divider-emoji">🏗️</span>
+    <div class="divider-text">Dernière section — Les Services !</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SECTION 5 — SERVICES
+═══════════════════════════════════════ -->
+<div class="section-header">
+    <span class="section-emoji">🛠️</span>
+    <h2 class="section-title-page">
+        Catégorie <span>05</span>
+    </h2>
+    <div class="section-title-page" style="font-size: 1.5rem;">
+        Services à la Personne
+    </div>
+    <p class="section-subtitle">8 idées — Budget : 0$ à 80$</p>
+</div>
+
+<div class="page-nav">
+    <span class="page-nav-brand">🚀 AfricaBusiness Digital</span>
+    <span class="page-num">Section 5 / 5</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+
+<!-- IDÉE 25 -->
+<div class="idea-card">
+    <div class="idea-card-header idea-card-header-1">
+        <div class="idea-number-badge">#25</div>
+        <span class="idea-emoji-big">📱</span>
+        <h3 class="idea-title">Réparation de Téléphones</h3>
+        <span class="idea-category-tag">🛠️ Services</span>
+    </div>
+    <div class="idea-card-body">
+        <div class="budget-box">
+            <span class="budget-icon">💰</span>
+            <div>
+                <div class="budget-amount">80$</div>
+                <div class="budget-label">Budget de démarrage</div>
+            </div>
+        </div>
+        <div class="revenue-box">
+            <span class="budget-icon">📈</span>
+            <div>
+                <div class="revenue-amount">500$ — 1500$ / mois</div>
+                <div class="revenue-label">Revenu estimé</div>
+            </div>
+        </div>
+        <ul class="icon-list">
+            <li><span class="list-icon">🔧</span> Kit de réparation complet — 50$</li>
+            <li><span class="list-icon">📱</span> Pièces de rechange stock — 30$</li>
+        </ul>
+        <ul class="steps-list">
+            <li><div class="step-num">1</div> Apprends sur YouTube (gratuit)</li>
+            <li><div class="step-num">2</div> Pratique sur de vieux téléphones</li>
+            <li><div class="step-num">3</div> Propose tes services dans le quartier</li>
+            <li><div class="step-num">4</div> Bouche à oreille = tes meilleurs clients</li>
+        </ul>
+        <div class="pro-tip">
+            <div class="pro-tip-header"><span>💡</span> Conseil Pro de Warros</div>
+            <p>Très rentable et peu concurrentiel dans beaucoup de villes africaines. 
+            Apprends sur YouTube : il y a des milliers de tutoriels gratuits. 
+            En 2 semaines tu peux commencer à réparer les écrans cassés !</p>
+        </div>
+    </div>
+</div>
+
+<!-- IDÉE 28 -->
+<div class="idea-card">
+    <div class="idea-card-header idea-card-header-6">
+        <div class="idea-number-badge">#28</div>
+        <span class="idea-emoji-big">🏍️</span>
+        <h3 class="idea-title">Transport & Courses Express</h3>
+        <span class="idea-category-tag">🛠️ Services</span>
+    </div>
+    <div class="idea-card-body">
+        <div class="budget-box">
+            <span class="budget-icon">💰</span>
+            <div>
+                <div class="budget-amount">30$</div>
+                <div class="budget-label">Budget de démarrage</div>
+            </div>
+        </div>
+        <div class="revenue-box">
+            <span class="budget-icon">📈</span>
+            <div>
+                <div class="revenue-amount">400$ — 1000$ / mois</div>
+                <div class="revenue-label">Revenu estimé</div>
+            </div>
+        </div>
+        <ul class="icon-list">
+            <li><span class="list-icon">🏍️</span> Moto ou vélo (si tu en as un) — 0$</li>
+            <li><span class="list-icon">⛽</span> Carburant 1ère semaine — 20$</li>
+            <li><span class="list-icon">📱</span> Crédit téléphone — 10$</li>
+        </ul>
+        <div class="pro-tip">
+            <div class="pro-tip-header"><span>💡</span> Conseil Pro de Warros</div>
+            <p>Commence dans UN seul quartier. Maîtrise-le totalement avant d'étendre. 
+            Crée un groupe WhatsApp "Courses Express [ton quartier]" 
+            et partage le numéro à tout le monde.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE BONUS
+═══════════════════════════════════════ -->
+<div class="page-nav">
+    <span class="page-nav-brand">🚀 AfricaBusiness Digital</span>
+    <span class="page-num">🎁 Bonus</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" style="width: 92%"></div></div>
+
+<div class="bonus-page">
+    <h2 class="bonus-title">
+        🎁 Tes <span>Bonus</span> Exclusifs
+    </h2>
+
+    <div class="bonus-card">
+        <div class="bonus-card-header">
+            <span class="bonus-icon">💬</span>
+            <div class="bonus-name">BONUS 1 — Script WhatsApp de Vente</div>
+        </div>
+        <p class="bonus-desc">
+            "Bonjour [Prénom] 👋 Je suis [ton nom], je propose [ton produit/service] 
+            dans le quartier [nom]. Cette semaine seulement, j'offre [offre spéciale]. 
+            Intéressé(e) ? Je vous réponds dans les 5 minutes ! 🚀"
+        </p>
+    </div>
+
+    <div class="bonus-card">
+        <div class="bonus-card-header">
+            <span class="bonus-icon">📊</span>
+            <div class="bonus-name">BONUS 2 — Tableau de Suivi des Ventes</div>
+        </div>
+        <p class="bonus-desc">
+            Note chaque jour : Ventes du jour — Dépenses — Bénéfice net. 
+            Révise chaque semaine. Ajuste ce qui ne marche pas. 
+            Ce simple tableau peut doubler tes revenus en 30 jours !
+        </p>
+    </div>
+
+    <div class="bonus-card">
+        <div class="bonus-card-header">
+            <span class="bonus-icon">🎯</span>
+            <div class="bonus-name">BONUS 3 — Plan d'Action 30 Jours</div>
+        </div>
+        <p class="bonus-desc">
+            Semaine 1 : Prépare et lance. Semaine 2 : Trouve tes 10 premiers clients. 
+            Semaine 3 : Optimise et améliore. Semaine 4 : Scale et développe.
+            En 30 jours tu auras un business qui tourne !
+        </p>
+    </div>
+
+    <div class="bonus-card">
+        <div class="bonus-card-header">
+            <span class="bonus-icon">🌍</span>
+            <div class="bonus-name">BONUS 4 — Règle du 80/20</div>
+        </div>
+        <p class="bonus-desc">
+            Les 3 premiers mois : réinvestis 80% de tes bénéfices dans ton business. 
+            Garde 20% pour toi. Cette règle simple peut transformer 100$ 
+            en 1000$ en 90 jours !
+        </p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE CONCLUSION
+═══════════════════════════════════════ -->
+<div class="page-nav">
+    <span class="page-nav-brand">🚀 AfricaBusiness Digital</span>
+    <span class="page-num">Conclusion</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+
+<div class="conclusion-page">
+    <span class="conclusion-emoji">🚀</span>
+    <h2 class="conclusion-title">
+        Maintenant,<br>PASSE À L'ACTION !
+    </h2>
+    <p class="conclusion-text">
+        Tu as maintenant <strong>30 idées concrètes</strong>.<br>
+        Tu as les budgets. Tu as les stratégies.<br><br>
+        La seule chose qui te sépare du succès,<br>
+        c'est de <strong>COMMENCER aujourd'hui.</strong><br><br>
+        Choisis UNE idée.<br>
+        Lance-la <strong>cette semaine.</strong><br>
+        Améliore chaque jour.<br><br>
+        <strong>L'Afrique a besoin de toi ! 🌍</strong>
+    </p>
+    <a href="#" class="conclusion-cta">
+        🚀 Je commence maintenant !
+    </a>
+
+    <div style="margin-top: 40px; position: relative; z-index: 1;">
+        <div style="background: rgba(26,26,46,0.15); border-radius: 16px; padding: 20px;">
+            <p style="font-size: 0.85rem; color: rgba(26,26,46,0.7); margin-bottom: 8px;">
+                📧 Des questions ? Contacte-moi :
+            </p>
+            <p style="font-weight: 700; color: #1a1a2e; font-size: 0.9rem;">
+                🚀 AfricaBusiness Digital<br>
+                👤 Warros ASSANI
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PIED DE PAGE
+═══════════════════════════════════════ -->
+<div style="background: #1a1a2e; padding: 24px; text-align: center;">
+    <p style="color: rgba(255,255,255,0.5); font-size: 0.8rem;">
+        © 2024 AfricaBusiness Digital — Warros ASSANI<br>
+        <span style="color: #F5A623;">Tous droits réservés</span>
+    </p>
+</div>
+
+</body>
+</html>
